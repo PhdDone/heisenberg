@@ -3,7 +3,7 @@
 	// Defaults
 	var SERVER = "ws://bark.phon.ioc.ee:82/dev/duplex-speech-api/ws/speech";
 	var SERVER_STATUS = "ws://bark.phon.ioc.ee:82/dev/duplex-speech-api/ws/status";
-	var REFERENCE_HANDLER = "http://bark.phon.ioc.ee:82/dev/duplex-speech-api/dynamic/reference";
+	//var REFERENCE_HANDLER = "http://bark.phon.ioc.ee:82/dev/duplex-speech-api/dynamic/reference";
 	var CONTENT_TYPE = "content-type=audio/x-raw,+layout=(string)interleaved,+rate=(int)16000,+format=(string)S16LE,+channels=(int)1";
 	// Send blocks 4 x per second as recommended in the server doc.
 	var INTERVAL = 250;
@@ -52,7 +52,8 @@
 		var config = cfg || {};
 		config.server = config.server || SERVER;
 		config.serverStatus = config.serverStatus || SERVER_STATUS;
-		config.referenceHandler = config.referenceHandler || SERVER_STATUS;
+		//config.referenceHandler = config.referenceHandler || SERVER_STATUS;
+        config.referenceHandler = config.referenceHandler || REFERENCE_HANDLER;
 		config.contentType = config.contentType || CONTENT_TYPE;
 		config.interval = config.interval || INTERVAL;
 		config.recorderWorkerPath = config.recorderWorkerPath || RECORDER_WORKER_PATH;
@@ -180,7 +181,7 @@
         headers["Content-Id"] = config["content_id"]
       }      
       $.ajax({
-        url: config.referenceHandler,
+        url: config.referenceHandler,  //TODO: add referenceHandler to accept text and decode header to uuid
         type: "POST",
         headers: headers,
         data: text,

@@ -55,7 +55,7 @@ function prettyfyHyp(text, doCapFirst, doPrependSpace) {
 
 function updateDisabledState() {
   var disabled = false;
-  var text = "Press button to dictate";
+  var text = "Press button to begin";
   if (!isMicrophoneInitialized) {
     disabled = true;
     text = "Microphone uninitialized";
@@ -115,20 +115,25 @@ function createDictate() {
       //server : "wss://" + serverBaseUrl + "/ws/speech",
       //serverStatus : "wss://" + serverBaseUrl + "/ws/status",
       //referenceHandler : "http://" + serverBaseUrl + "/dynamic/reference",
-      server : "wss://bark.phon.ioc.ee:8443/english/duplex-speech-api/ws/speech",
-      serverStatus : "wss://bark.phon.ioc.ee:8443/english/duplex-speech-api/ws/status",
-      referenceHandler : "http://bark.phon.ioc.ee:82/english/duplex-speech-api/dynamic/reference",
+
+      //server : "wss://bark.phon.ioc.ee:8443/english/duplex-speech-api/ws/speech",
+      //serverStatus : "wss://bark.phon.ioc.ee:8443/english/duplex-speech-api/ws/status",
+      //referenceHandler : "http://bark.phon.ioc.ee:82/english/duplex-speech-api/dynamic/reference",
  
       //server : "ws://bayes:8888/client/ws/speech",
       //serverStatus : "ws://bayes:8888/client/ws/status",
       //referenceHandler : "http://bayes:8888/client/dynamic/reference",
-      
+
+      server : "ws://192.168.1.39:9004/client/ws/speech",
+      serverStatus : "ws://192.168.1.39:9004/client/ws/status",
+      referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
+
       recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
       onReadyForSpeech : function() {
         isConnected = true;
         __message("READY FOR SPEECH");
         $("#recbutton").addClass("playing");
-        $("#helptext").html("Räägi");
+        $("#helptext").html("Listening");
         startPosition = $("#trans").prop("selectionStart");
         endPosition = startPosition;
         var textBeforeCaret = $("#trans").val().slice(0, startPosition);
@@ -218,6 +223,8 @@ function toggleListening() {
     $("#recbutton").addClass("disabled");
     $("#helptext").html("Wait..");    
 	} else {
+	    //reset every time
+        resetText()
 		dictate.startListening();
 	}
 }

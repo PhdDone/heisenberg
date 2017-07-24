@@ -1,94 +1,104 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <meta charset="utf8">
-    <title>Dikteeri! | Dikteerimine</title>
+<head>
+    <meta charset="utf8">
+    <title>Heisenberg - Speech Data Collection</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Test description">
     <meta name="author" content="">
 
 
-    
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->    
-        <link href="/dictate/media/css/dikteeri.css" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="/dictate/media/css/dikteeri.css" rel="stylesheet">
 
 
-
-            <link rel="shortcut icon" href="/dictate/media/img/favicon.ico">
+    <link rel="shortcut icon" href="/dictate/media/img/favicon.ico">
     <link rel="apple-touch-icon" href="/dictate/media/img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/dictate/media/img/appleimgim-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/dictate/media/img/apple-touch-icon-114x114.png">
-        
-        
-            <script>
-  var _gaq = [['_setAccount', 'UA-18651078-4'], ['_trackPageview']];
-  (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.src = '//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-  }(document, 'script'));
-</script>
-      </head>
 
-  <body class="index">
 
-    
-    <div class="container">
-        <!-- Static navbar -->
-  <div class="navbar navbar-default" role="navigation">
+    <script>
+        var _gaq = [['_setAccount', 'UA-18651078-4'], ['_trackPageview']];
+        (function (d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = '//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+        }(document, 'script'));
+    </script>
+</head>
+
+<body class="index">
+
+
+<div class="container">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Dictation</a>
-      </div>
-      <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-<li><a href="about.html">About </a></li></ul>
-      </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Speech Data Collection</a>
+            </div>
+        </div>
     </div>
-      </div>
 
 
-       
- 
-      <p><div class="">
-    <p class="">You can use this web application to enter English text via speech. Your web browser captures your speech, sends the signal to our server where a speech recognition system is used to convert it into text, which is finally sent back to the web browser.    </p>
-  </div>
-  <div class="alert alert-warning  alert-dismissable" id="show_once_message">
-  <button type="button" id="show_once_message_close_button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-  <p>Dictation works with a recent version of <a href="http://www.google.com/chrome/">Google Chrome</a>  (Windows, Mac, Linux) or Firefox (tested with version 31). The browser should ask for a permission to use your microphone. You should grant the permission, otherwise the dictation will not work.</p>
-  <div class="hidden-xs hidden-sm">
-  <p><span class="label label-info">Attention:</span> for the best recognition result, use a headset microphone. Typical built-in laptop microphones are not suitable for dictation. 
-  </p>
-  </div>
-  </div>
-To get the best result, use a clear voice and a moderate speech tempo. There is no need to make pauses between words.  <div class="well">
-  <div class="text-center">
-    <div id="button-toolbar" class="hidden btn-toolbar hidden-xs hidden-sm" role="toolbar">
-        <button id="submitButton" type="button" class="btn btn-default disabled" onclick="submitReference();" title="Send the corrected text to the server so that it could be used for improving the speech recognition models"><span class="glyphicon glyphicon-upload"></span> Send a correction</button>
-        <button id="resetButton" type="button" class="btn btn-default" onClick="resetText();"><span class="glyphicon glyphicon-remove"></span> Clear</button>
-    </div><br />
-  <p>
-  <textarea id="trans" class="form-control" rows="6"></textarea>
-  </p>
-  </div>
-  <div id="content_id" class="hidden">xxx</div>
-  <div id="user_id" class="hidden">xxx</div>
-  <div id="recbutton" class="disabled" onclick="toggleListening();"></div>
-  <p id="helptext" class="text-center tiny">Microphone uninitialized</p>
-  </div>
-  <hr/></p>
-<p><p>There are currently <span id="serverStatusBar">0</span> slots available for dictation.</p></p>
+
+<div class="alert alert-warning  alert-dismissable" id="show_once_message">
+    <button type="button" id="show_once_message_close_button" class="close" data-dismiss="alert" aria-hidden="true">
+        &times;
+    </button>
+    <p>
+        <div class="">
+    <p class="">You can use this web application to enter English text via speech. Your web browser captures your
+        speech, sends the signal to our server where a speech recognition system is used to convert it into text, which
+        is finally sent back to the web browser. </p>
+</div>
+    <p>Dictation works with a recent version of <a href="http://www.google.com/chrome/">Google Chrome</a> (Windows, Mac,
+        Linux) or Firefox (tested with version 31). The browser should ask for a permission to use your microphone. You
+        should grant the permission, otherwise the dictation will not work.</p>
+    <div class="hidden-xs hidden-sm">
+        <p><span class="label label-info">Attention:</span> for the best recognition result, use a headset microphone.
+            Typical built-in laptop microphones are not suitable for dictation.
+        </p>
+    </div>
+<p>To get the best result, use a clear voice and a moderate speech tempo. There is no need to make pauses between words.</p>
+</div>
+<div class="well">
+    <div class="text-center">
+        <div id="button-toolbar" class="hidden btn-toolbar hidden-xs hidden-sm" role="toolbar">
+            <button id="submitButton" type="button" class="btn btn-default disabled" onclick="submitReference();"
+                    title="Send the corrected text to the server so that it could be used for improving the speech recognition models">
+                <span class="glyphicon glyphicon-upload"></span> Send a correction
+            </button>
+            <button id="resetButton" type="button" class="btn btn-default" onClick="resetText();"><span
+                    class="glyphicon glyphicon-remove"></span> Clear
+            </button>
+        </div>
+        <br/>
+        <p>
+            <textarea id="trans" class="form-control" rows="6"></textarea>
+        </p>
+    </div>
+    <div id="content_id" class="">xxx</div>
+    <div id="user_id" class="hidden">xxx</div>
+    <div id="recbutton" class="disabled" onclick="toggleListening();"></div>
+    <p id="helptext" class="text-center tiny">Microphone uninitialized</p>
+</div>
+<hr/>
+</p>
+<p>
+<div class="">
+<p>There are currently <span id="serverStatusBar">0</span> slots available for dictation.</p></p>
+</div>
 <!--
   <div class="small hidden-xs hidden-sm">
   Eksperimentaalne bookmarklet:
@@ -96,37 +106,37 @@ To get the best result, use a clear voice and a moderate speech tempo. There is 
   </div>
 -->
 
-<p><div class="small">
-  <p>Your speech might be used for improving the speech recognition system. Your speech will not be shared with third parties.
-  </p>
-  </div></p>
-      <hr>
-      <footer>
-                <p>Created by: <a href="http://www.phon.ioc.ee">Institute of Cybernetics at Tallinn University of Technology</a></p>
-              </footer>
-    </div> <!-- /container -->
-
-        
-                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/dictate/media/js/libs/jquery-1.10.1.min.js">\x3C/script>')</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
-    
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    
-        <script src="/dictate/media/js/libs/dictate.js/lib/dictate.js"></script>
-    <script src="/dictate/media/js/libs/dictate.js/lib/recorder.js"></script>
-    <script src="/dictate/media/js/libs/dictate.js/lib/speex.min.js"></script>    
-    <script src="/dictate/media/js/libs/notify-combined.min.js"></script>    
-    <script src="/dictate/media/js/libs/jquery.cookieBar.js"></script>    
-    <script src="/dictate/media/js/dikteeri.js"></script>
+<p>
+    <div class="small">
+<p>Your speech might be used for improving the speech recognition system. Your speech will not be shared with third
+    parties.
+</p>
+</div></p>
+<hr>
+<footer?
+</footer>
+</div> <!-- /container -->
 
 
-    <!--[if lt IE 7 ]>
-      <script src="/dictate/media/js/libs/dd_belatedpng.js"></script>
-      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-    <![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/dictate/media/js/libs/jquery-1.10.1.min.js">\x3C/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script src="/dictate/media/js/libs/dictate.js/lib/dictate.js"></script>
+<script src="/dictate/media/js/libs/dictate.js/lib/recorder.js"></script>
+<script src="/dictate/media/js/libs/dictate.js/lib/speex.min.js"></script>
+<script src="/dictate/media/js/libs/notify-combined.min.js"></script>
+<script src="/dictate/media/js/libs/jquery.cookieBar.js"></script>
+<script src="/dictate/media/js/dikteeri.js"></script>
 
 
+<!--[if lt IE 7 ]>
+<script src="/dictate/media/js/libs/dd_belatedpng.js"></script>
+<script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+<![endif]-->
 
-      </body>
+
+</body>
 </html>
