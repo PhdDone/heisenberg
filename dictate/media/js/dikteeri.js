@@ -128,10 +128,16 @@ function createDictate() {
       //serverStatus : "ws://192.168.1.39:9004/client/ws/status",
       //referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
 
-      server : "wss://216.9.9.58:9004/client/ws/speech",
-      serverStatus : "wss://216.9.9.58:9004/client/ws/status",
-      referenceHandler : "https://216.9.9.58:9004/client/dynamic/reference",
+      //server : "wss://216.9.9.58:9004/client/ws/speech",
+      //serverStatus : "wss://216.9.9.58:9004/client/ws/status",
+      //referenceHandler : "https://216.9.9.58:9004/client/dynamic/reference",
+      //recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
+
+      server : "wss://192.168.1.39:9004/client/ws/speech",
+      serverStatus : "wss://192.168.1.39:9004/client/ws/status",
+      referenceHandler : "https://192.168.1.39:9004/client/dynamic/reference",
       recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
+      
       onReadyForSpeech : function() {
         isConnected = true;
         __message("READY FOR SPEECH");
