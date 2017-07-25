@@ -124,10 +124,13 @@ function createDictate() {
       //serverStatus : "ws://bayes:8888/client/ws/status",
       //referenceHandler : "http://bayes:8888/client/dynamic/reference",
 
-      server : "ws://192.168.1.39:9004/client/ws/speech",
-      serverStatus : "ws://192.168.1.39:9004/client/ws/status",
-      referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
+      //server : "ws://192.168.1.39:9004/client/ws/speech",
+      //serverStatus : "ws://192.168.1.39:9004/client/ws/status",
+      //referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
 
+      server : "wss://216.9.9.58:9004/client/ws/speech",
+      serverStatus : "wss://216.9.9.58:9004/client/ws/status",
+      referenceHandler : "https://216.9.9.58:9004/client/dynamic/reference",
       recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
       onReadyForSpeech : function() {
         isConnected = true;
