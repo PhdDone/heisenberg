@@ -128,19 +128,19 @@ function createDictate() {
       //serverStatus : "ws://192.168.1.39:9004/client/ws/status",
       //referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
 
-      //server : "wss://216.9.9.58:9004/client/ws/speech",
-      //serverStatus : "wss://216.9.9.58:9004/client/ws/status",
-      //referenceHandler : "https://216.9.9.58:9004/client/dynamic/reference",
-      //recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
+      server : "wss://216.9.9.58:9004/client/ws/speech",
+      serverStatus : "wss://216.9.9.58:9004/client/ws/status",
+      referenceHandler : "https://216.9.9.58:9004/client/dynamic/reference",
+      recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
 
       //server : "wss://192.168.1.39:9004/client/ws/speech",
       //serverStatus : "wss://192.168.1.39:9004/client/ws/status",
       //referenceHandler : "https://192.168.1.39:9004/client/dynamic/reference",
-      recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
+      //recorderWorkerPath : "/dictate/media/js/libs/dictate.js/lib/recorderWorker.js",
 
-      server : "ws://192.168.1.39:9005/streaming-server/websocket/asr?partner=mobvoi",
-      serverStatus : "ws://192.168.1.39:9004/client/ws/status",
-      referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
+      //server : "ws://192.168.1.39:9005/streaming-server/websocket/asr?partner=mobvoi",
+      //serverStatus : "ws://192.168.1.39:9004/client/ws/status",
+      //referenceHandler : "http://192.168.1.39:9004/client/dynamic/reference",
 
       onReadyForSpeech : function() {
         isConnected = true;
