@@ -52,7 +52,7 @@
 
 
 
-<div class="alert alert-warning  alert-dismissable" id="show_once_message">
+<!-- <div class="alert alert-warning  alert-dismissable" id="show_once_message">
     <button type="button" id="show_once_message_close_button" class="close" data-dismiss="alert" aria-hidden="true">
         &times;
     </button>
@@ -72,12 +72,14 @@
     </div>
 <p>To get the best result, use a clear voice and a moderate speech tempo. There is no need to make pauses between words.</p>
 </div>
+-->
+
 <div class="well">
     <div class="text-center">
         <div id="button-toolbar" class="hidden btn-toolbar hidden-xs hidden-sm" role="toolbar">
-            <button id="submitButton" type="button" class="btn btn-default disabled" onclick="submitReference();"
+            <button id="submitButton" type="button" class="btn btn-default" onclick="submitReference();"
                     title="Send the corrected text to the server so that it could be used for improving the speech recognition models">
-                <span class="glyphicon glyphicon-upload"></span> Send a correction
+                <span class="glyphicon glyphicon-upload"></span> Save
             </button>
             <button id="resetButton" type="button" class="btn btn-default" onClick="resetText();"><span
                     class="glyphicon glyphicon-remove"></span> Clear

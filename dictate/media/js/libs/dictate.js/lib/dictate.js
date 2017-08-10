@@ -4,8 +4,8 @@
 	var SERVER = "ws://bark.phon.ioc.ee:82/dev/duplex-speech-api/ws/speech";
 	var SERVER_STATUS = "ws://bark.phon.ioc.ee:82/dev/duplex-speech-api/ws/status";
 	//var REFERENCE_HANDLER = "http://bark.phon.ioc.ee:82/dev/duplex-speech-api/dynamic/reference";
-	//var CONTENT_TYPE = "content-type=audio/x-raw,+layout=(string)interleaved,+rate=(int)16000,+format=(string)S16LE,+channels=(int)1";
-    var CONTENT_TYPE = "content-type=audio/x-raw,+layout=(string)interleaved,+rate=(int)8000,+format=(string)S16LE,+channels=(int)1";
+	var CONTENT_TYPE = "content-type=audio/x-raw,+layout=(string)interleaved,+rate=(int)16000,+format=(string)S16LE,+channels=(int)1";
+        //var CONTENT_TYPE = "content-type=audio/x-raw,+layout=(string)interleaved,+rate=(int)8000,+format=(string)S16LE,+channels=(int)1";
 	// Send blocks 4 x per second as recommended in the server doc.
 	var INTERVAL = 250;
 	var TAG_END_OF_SENTENCE = "EOS";
