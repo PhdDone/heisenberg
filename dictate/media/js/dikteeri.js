@@ -259,14 +259,14 @@ function resetText() {
   $("#content_id").html(new_uuid);
   dictate.getConfig().content_id = new_uuid;
   $("#button-toolbar").addClass("hidden");
-  $("#submitButton").addClass("disabled");
+  //$("#submitButton").addClass("disabled");
 }
 
 function submitReference() {
   dictate.submitReference($("#trans").val(), 
     function successCallback(data, textStatus, jqHR) { $("#submitButton").notify("Text sent. Thank you!", "success"); }, 
     function errorCallback(data, textStatus, jqHR) { $("#submitButton").notify("Failed to send text!", "error"); });
-  $("#submitButton").addClass("disabled");
+  //$("#submitButton").addClass("disabled");
 }
 
 function uuid() {
