@@ -110,7 +110,6 @@ var dictate = null;
 
   
 function createDictate() {
-  serverBaseUrl = "bark.phon.ioc.ee:82/english/duplex-speech-api";
   dictate = new Dictate({
       //server : "wss://" + serverBaseUrl + "/ws/speech",
       //serverStatus : "wss://" + serverBaseUrl + "/ws/status",
@@ -165,7 +164,10 @@ function createDictate() {
         isConnected = false;
         __message("END OF SESSION");
         $("#recbutton").removeClass("playing");
-        updateDisabledState();      
+        updateDisabledState();
+	//TODO: update audio src to $("#content_id").html()
+	  //newSrc = $("#content_id").html() + ".raw.wav";
+	  //$("#audioSrc").attr('src', newSrc)
         $("#button-toolbar").removeClass("hidden");
       },
       onServerStatus : function(json) {
@@ -264,8 +266,9 @@ function resetText() {
 
 function replayAudio() {
     console.log("replay audio");
-    var x = document.getElementById("myAudio");
-    x.play();
+    var filename = $("#content_id").html() + ".raw.wav"
+    console.log(filename)
+    $("#myAudio").attr("src",filename).trigger("play");
 }
 
 function submitReference() {
