@@ -264,7 +264,10 @@ function resetText() {
 
 function replayAudio() {
     console.log("replay audio");
+    var x = document.getElementById("myAudio");
+    x.play();
 }
+
 function submitReference() {
   dictate.submitReference($("#trans").val(), 
     function successCallback(data, textStatus, jqHR) { $("#submitButton").notify("Text sent. Thank you!", "success"); }, 
