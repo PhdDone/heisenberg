@@ -262,6 +262,9 @@ function resetText() {
   //$("#submitButton").addClass("disabled");
 }
 
+function replayAudio() {
+    console.log("replay audio");
+}
 function submitReference() {
   dictate.submitReference($("#trans").val(), 
     function successCallback(data, textStatus, jqHR) { $("#submitButton").notify("Text sent. Thank you!", "success"); }, 
